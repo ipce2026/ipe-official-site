@@ -37,7 +37,7 @@
 </div>
 <button class="back-to-top" id="backToTop" title="回到頂部"><i class="fas fa-arrow-up"></i></button>
 <script>
-const schedules = {"A": [{"start": "09:00", "end": "11:00", "subject": "熱蠟初級A4"}, {"start": "11:50", "end": "14:00", "subject": "美體初級A3"}, {"start": "14:20", "end": "16:10", "subject": "美容初級A2"}], "B": [{"start": "08:50", "end": "11:00", "subject": "美體初級A3"}, {"start": "11:50", "end": "13:40", "subject": "美容初級A2"}, {"start": "14:00", "end": "16:00", "subject": "熱蠟初級A4"}], "C": [{"start": "09:00", "end": "10:50", "subject": "美容初級A2"}, {"start": "11:40", "end": "13:40", "subject": "熱蠟初級A4"}, {"start": "14:00", "end": "16:10", "subject": "美體初級A3"}]};
+const schedules = {"A": [{"start": "09:00", "end": "11:00", "subject": "熱蠟初級A4"}, {"start": "11:50", "end": "14:00", "subject": "美體初級A3"}, {"start": "14:20", "end": "16:10", "subject": "皮膚初級A2"}], "B": [{"start": "08:50", "end": "11:00", "subject": "美體初級A3"}, {"start": "11:50", "end": "13:40", "subject": "皮膚初級A2"}, {"start": "14:00", "end": "16:00", "subject": "熱蠟初級A4"}], "C": [{"start": "09:00", "end": "10:50", "subject": "皮膚初級A2"}, {"start": "11:40", "end": "13:40", "subject": "熱蠟初級A4"}, {"start": "14:00", "end": "16:10", "subject": "美體初級A3"}]};
 const params = new URLSearchParams(window.location.search);
 const group = (params.get('group') || '').replace('組','').toUpperCase();
 const name = params.get('name') || '';
