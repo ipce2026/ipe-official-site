@@ -1,4 +1,4 @@
-/* =========================================
+﻿/* =========================================
    IPE 學生專區共用樣式表
    ========================================= */
 
@@ -92,7 +92,7 @@
 @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
 /* PDF 下載按鈕 */
-.download-btn { display: inline-flex; align-items: center; background: linear-gradient(135deg, var(--ipe-gold-dark) 0%, var(--ipe-gold) 50%, var(--ipe-gold-light) 100%); color: #fff !important; padding: 12px 28px; border-radius: 50px; font-size: 15px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(198, 169, 107, 0.3); transition: all 0.3s ease; margin-bottom: 25px; letter-spacing: 1px; }
+.download-btn { display: inline-flex; align-items: center; background: linear-gradient(135deg, var(--ipe-gold-dark) 0%, var(--ipe-gold) 50%, var(--ipe-gold-light) 100%); color: #fff !important; padding: 12px 28px; border-radius: 50px; border: 0; font-family: inherit; font-size: 15px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(198, 169, 107, 0.3); transition: all 0.3s ease; margin-bottom: 25px; letter-spacing: 1px; cursor: pointer; }
 .download-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(198, 169, 107, 0.5); color: #fff; }
 
 /* 回到頂部按鈕 */
@@ -179,4 +179,18 @@ body { margin: 0; background: #F6F8FB; overflow-x: hidden; }
     .ipe-table-wrap::before { content: "表格可左右滑動查看"; display: block; padding: 10px 14px; color: var(--ipe-gold-dark); font-weight: 900; font-size: 13px; background: #FFF9ED; border-bottom: 1px solid #F1DEB8; }
     .qna-header { align-items: flex-start; }
     .qna-item { overflow-wrap: anywhere; }
+}
+
+@media print {
+    body { background: #fff; }
+    .ipe-wrap { width: 100%; max-width: none; margin: 0; box-shadow: none; }
+    .ipe-main-content { padding: 0; }
+    .course-home-actions,
+    .download-btn,
+    .back-to-top,
+    .svg-arrow { display: none !important; }
+    .ipe-details { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+    .ipe-content { display: block; }
+    .qna-grid { gap: 12px; }
+    .qna-item { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
 }

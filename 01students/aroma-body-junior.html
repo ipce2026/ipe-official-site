@@ -1,10 +1,17 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>芳香美體初級 - 學生版本</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="students-page.css">
+</head>
+<body>
 <div class="ipe-wrap">
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="students-page.css">
-
-<main class="ipe-main-content">
+<main class="ipe-main-content" data-course-id="aroma-body-junior">
     <div class="course-home-actions"><a href="index.html" class="course-home-btn"><i class="fas fa-home"></i> 回到學生專區首頁</a></div>
     <span class="section-label">Certification Subject</span>
     <h2 class="ipe-chapter-title">芳香美體初級 <span style="color: var(--ipe-gold); font-size: 26px;">學生版本</span></h2>
@@ -131,10 +138,9 @@
         <div class="ipe-content">
             <p class="qna-desc" style="margin-top: 0;">以下為初級測驗範圍（共 100 題），系統已自動為您排版並標示正確解答：</p>
             
-            <!-- 注意：此處 PDF 連結暫時為空，待您上傳後可直接替換 # -->
-            <a href="https://drive.google.com/file/d/10tLkz0iiOM5EJ1sW0CHwZZsbJ_2i_tuK/view?usp=sharing" target="_blank" class="download-btn">
-                <i class="fas fa-file-pdf" style="margin-right: 8px; font-size: 18px;"></i> 下載完整 PDF 題庫 
-            </a>
+            <button type="button" class="download-btn print-pdf-btn" data-pdf-name="aroma-body-junior.pdf">
+                <i class="fas fa-file-pdf" style="margin-right: 8px; font-size: 18px;"></i> 下載 / 列印目前完整內容
+            </button>
 
             <div id="qna-container" class="qna-grid">
                 <!-- JS 會在此自動生成題庫卡片 -->
@@ -151,174 +157,7 @@
 
 </div>
 
-<script>
-/* ========================================================
-   題庫自動解析器 (JavaScript)
-   未來若要更新題庫，只需將文字貼在 qnaRawText 中即可，
-   系統會自動過濾雜訊並生成漂亮排版！
-======================================================== */
-const qnaRawText = `
-1(B) 美體按摩最主要的目的為何？ (A)增加肌肉張力 (B)促進血液循環 (C)減少骨密度 (D)刺激神經疼痛
-2(C) 淋巴按摩的手法應該？ (A)快速用力 (B)深層重壓 (C)輕柔緩慢 (D)反覆拍打
-3(C) 客人有發燒情況時是否適合進行按摩？ (A)可以 (B)視情況 (C)不適合 (D)只做局部
-4(B) 按摩時順著肌肉紋理操作的目的是？ (A)增加疼痛 (B)放鬆肌肉 (C)刺激骨骼 (D)造成發炎
-5(C) 精油使用前應？ (A)直接塗抹 (B)加熱到高溫 (C)稀釋後使用 (D)加水混合
-6(B) 淋巴系統主要功能為？ (A)傳導神經 (B)排除代謝廢物 (C)增強骨骼 (D)產生血液
-7(A) 按摩前應注意？ (A)客戶身體狀況 (B)只看年齡 (C)只看性別 (D)不需詢問
-8(B) 刮痧或深層按摩後，客人應： (A)立刻吹冷氣 (B)多喝水 (C)馬上運動 (D)洗冷水澡
-9(B) 按摩時發現客人皮膚紅腫應： (A)繼續加壓 (B)立即停止 (C)忽略 (D)加快速度
-10(A) 正確的按摩姿勢可以： (A)保護施術者腰部 (B)增加疲勞 (C)降低效率 (D)造成職業傷害
-11(B) 發燒時是否適合按摩？ (A)可以 (B)不適合 (C)局部即可 (D)視心情
-12(B) 按摩前應先： (A)收錢 (B)消毒雙手 (C)開冷氣 (D)播音樂
-13(C) 深層按摩主要作用在： (A)表皮 (B)骨骼 (C)深層肌肉 (D)毛孔
-14(B) 客人有開放性傷口應： (A)加強按摩 (B)避開該部位 (C)熱敷 (D)冷敷
-15(B) 按摩後建議客人： (A)喝冰水 (B)多喝水 (C)熬夜 (D)吹風
-16(A) 以下何者為禁忌症？ (A)感冒發燒 (B)壓力大 (C)久坐 (D)肌肉痠痛
-17(B) 按摩床高度應： (A)高於肩膀 (B)適合施術者腰部 (C)越低越好 (D)越高越好
-18(B) 按摩油的作用為： (A)增加摩擦 (B)減少摩擦 (C)造成刺激 (D)讓皮膚乾燥
-19(B) 拍打法屬於： (A)揉捏法 (B)叩擊法 (C)推壓法 (D)摩擦法
-20(A) 肌肉痙攣適合： (A)輕柔放鬆 (B)重力敲打 (C)冷水沖 (D)不處理
-21(C) 懷孕初期應避免按摩： (A)背部 (B)手臂 (C)腹部 (D)小腿
-22(B) 按摩可幫助： (A)增加壓力 (B)改善睡眠 (C)破壞肌肉 (D)造成水腫
-23(B) 精油過敏應： (A)繼續使用 (B)停止使用 (C)加量 (D)加熱
-24(C) 按摩時間一般為： (A)5分鐘 (B)10分鐘 (C)60-90分鐘 (D)3小時
-25(B) 按摩時手部應： (A)冰冷 (B)溫暖 (C)潮濕 (D)乾裂
-26(A) 淋巴流向主要往： (A)心臟 (B)腳底 (C)手指 (D)頭頂
-27(C) 按摩時應避免： (A)與客人溝通 (B)觀察反應 (C)用力過猛 (D)使用音樂
-28(A) 按摩可改善： (A)循環不良 (B)骨折 (C)傷口裂開 (D)發燒
-29(B) 客人有靜脈曲張應： (A)重壓 (B)避開或輕柔 (C)拍打 (D)刮痧
-30(B) 美體按摩屬於： (A)醫療行為 (B)舒壓保健 (C)手術 (D)藥物治療
-31(A) 按摩前應了解： (A)客戶健康史 (B)星座 (C)血型 (D)興趣
-32(B) 油壓按摩屬於： (A)乾式按摩 (B)濕式按摩 (C)敲打療法 (D)冷敷療法
-33(B) 深呼吸可幫助： (A)緊張 (B)放鬆 (C)疼痛 (D)發炎
-34(A) 按摩時應保持： (A)良好體態 (B)彎腰駝背 (C)單手操作 (D)快速亂推
-35(A) 淋巴按摩適合： (A)水腫 (B)骨折 (C)發炎 (D)高燒
-36(D) 接待前的準備應包含？ (A)美化佈置環境 (B)外表整潔 (C)準備資料及茶點 (D)以上皆是。
-37(A) 遇有訪客需引導時接待者與訪客行進時的位子應？ (A)接待者在前，訪客在後 (B)接待者在後，訪客在前 (C)兩者並行 (D)隨意。
-38(C) 美體師在工作上應避免？ (A)準時上班 (B)高尚品德 (C)背後論人長短 (D)端莊的儀表。
-39(B) SPA美體師的個人儀表宜？ (A)花俏 (B)整齊、清潔 (C)另類型 (D)最好不要裝扮。
-40(D) 接待應對的基本之禮貌用語是？ (A)請 (B)謝謝 (C)對不起 (D)以上皆是。
-41(B) 與顧客通話不應？ (A)談話速度不宜太快 (B)邊吃東西邊通話 (C)語義要清楚，避免含糊不清 (D)與顧客通話完後，應等對方掛斷電話後，再輕輕地放回電話筒。
-42(C) 顧客資料上的電話，是用來？ (A)聊天 (B)約會 (C)售後服務 (D)守望相助。
-43(A) 顧客的抱怨與不滿意應？ (A)儘速處理 (B)置之不理 (C)與他爭論到底 (D)逃避。
-44(C) 說服顧客購買產品時，最好的方式是？ (A)誇大商品功效 (B)批評產品品質 (C)親切的服務，詳細解說 (D)強迫推銷。
-45(D) SPA美體師的服務態度應避免？ (A)心平氣和 (B)平易近人 (C)遇事樂觀 (D)冷漠無情。
-46(C) 工作時愉快的和顧客交談很容易與顧客建立友誼，但不宜交談的話題是？ (A)流行資訊 (B)旅遊趣事 (C)他人隱私 (D)地方時事。
-47(C) SPA美體師不可為顧客從事的服務是？ (A)美體去角質 (B)臉部保養 (C)隆鼻 (D)手部按摩。
-48(D) 良好的美體師，工作時應？ (A)戴口罩 (B)穿著工作服 (C)注意消毒衛生 (D)以上皆是。
-49(C) 美容美體從業人員應多久健康檢查一次？ (A)三年 (B)半年 (C)一年 (D)五年。
-50(B) 客人進門作美體按摩要先做哪一項服務？ (A)沖澡 (B)諮詢 (C)蒸氣 (D)頭部按摩。
-51(C) 填寫顧客資料卡的主要目的是？ (A)銷售產品給顧客 (B)誘導顧客購買療程 (C)更清楚了解顧客的皮膚類型，同時給予正確的專業護膚 (D)評估顧客的經濟能力。
-52(A) SPA 美體師與顧客交談時應？ (A)注視對方 (B)左顧右盼 (C)嚼口香糖 (D)大聲說話。
-53(C) 對待顧客的態度最忌？ (A)熱誠的服務 (B)溫馨的微笑 (C)漠不關心、不耐煩 (D)輕聲細語。
-54(D) SPA 美體師與顧客相處時應避免？ (A)照顧顧客 (B)容忍顧客 (C)諒解顧客 (D)侵犯顧客。
-55(A) SPA 美體師吸引顧客的必要條件是？ (A)親切的待人 (B)花俏的外表 (C)矯揉造作的態度 (D)傲慢的態度。
-56(B) SPA 美體師的個人儀表宜以？ (A)花俏 (B)整潔、清潔 (C)時髦 (D)外型多變化。
-57(A) SPA 美體師分析自我人格是為了？ (A)自我改進 (B)聰明表現 (C)好的習慣 (D)排遣時間。
-58(D) SPA美體師服務顧客時保持正確姿勢的重要性為何？ (A)有助於預防疲勞 (B)創造優雅姿勢 (C)增加自信 (D)以上皆是。
-59(A) 下列何種維生素缺乏，容易造成廣泛性皮膚乾燥、脫皮及毛囊角化？ (A)維生素A (B)維生素C (C)維生素E (D)維生素F。
-60(C) 女性的曲線美是決定於？ (A)表皮 (B)真皮 (C)皮下組織 (D)角質層。 (B)55.關於角質層之敘述，何者為非？ (A)由無核死細胞組成 (B)需時常換膚或使用磨砂膏，以去除角質 (C)皮膚本身有更新能力 (D)角質層具有保護作用。
-61(B) 有關痤瘡(青春痘)的形成原因，何者為非？ (A)荷爾蒙分泌失常 (B)免疫機能的障礙 (C)細菌感染 (D)毛孔機械性摩擦而阻塞。
-62(B) 當皮膚受傷時肥胖細胞(mast cell)會釋出？ (A)組織胺及肝素 (B)腎上腺素及組織胺 (C)肝素及腎上腺素 (D)西胺淚素及組織胺。
-63(B) 皮膚不同部位之通透性不同，與下列何種因素最有關？ (A)角質層厚度 (B)細胞間脂質含量 (C)皮脂腺分泌量 (D)毛囊數目。
-64(C) 下列何者非人體天然紫外線防禦因子？ (A)角質層的蛋白(Keratin) (B)犬尿酸(Urocanic-acid) (C)彈力蛋白(Elastin) (D)黑色素(Melanin)。
-65(C) 長久以來過度曝曬使皮膚失去彈性，如何幫助改善？ (A)可用皮膚保養品復原 (B)可口服健康食品恢復 (C)很難復原 (D)可以雷射整治。
-66(C) 皮膚經過陽光或紫外線照射後，所產生之物質是何種維生素？ (A)維生素D1 (B)維生素D2 (C)維生素D3 (D)維生素D4。
-67(C) 紫外線中穿透力最強的是： (A)UVC (B)UVB (C)UVA (D)紅外線
-68(B) 造成皮膚曬紅、曬傷的主要紫外線為： (A)UVA (B)UVB (C)UVC (D)藍光
-69(B) UVA主要會導致： (A)表皮脫落 (B)光老化 (C)凍傷 (D)過敏原產生
-70(B) UVC通常被什麼阻擋？ (A)雲層 (B)臭氧層 (C)空氣 (D)水氣
-71(A) 紫外線最容易造成： (A)皺紋 (B)骨折 (C)水腫 (D)低血壓
-72(A) 長期曝曬可能導致： (A)皮膚癌 (B)骨質疏鬆 (C)脫髮 (D)關節炎
-73(B) 防曬係數SPF主要防禦： (A)UVA (B)UVB (C)紅外線 (D)藍光
-74(C) PA+++代表防護： (A)UVB (B)UVC (C)UVA (D)紅光
-75(B) 紫外線會破壞皮膚中的： (A)鈣質 (B)膠原蛋白 (C)血紅素 (D)角質層
-76(A) 曬後常見反應為： (A)色素沉澱 (B)低溫 (C)水腫消失 (D)皮膚變厚
-77(A) 紫外線會產生： (A)自由基 (B)維生素C (C)酵素增加 (D)抗體
-78(A) 光老化主要表現為： (A)細紋鬆弛 (B)骨骼變形 (C)指甲脫落 (D)血壓升高
-79(B) 一天中紫外線最強時間為： (A)早上6點 (B)中午12點左右 (C)下午6點 (D)晚上8點
-80(A) 下列皮膚上的何種措施，防曬效果最佳？ (A)穿上衣物 (B)撐傘、戴帽 (C)塗抹SPF數值最大的防曬乳 (D)按時塗抹 SPF 數值最大的防曬乳。
-81(C) 敏感皮膚最不適宜的護膚措施是？ (A)防曬 (B)滋潤 (C)去角質 (D)敷面。
-82(D) 表皮層的「角質化過程」，何者正確？ (A)表皮的角質化週期大約是28天左右 (B)從基底層移動到角質層約要14天 (C)然後在角質層大約停留14天才自行代謝剝落 (D)以上皆是
-83(B) 針對皮膚在性別差異，下列敘述何者正確？ (A)皮膚的基本構造不同 (B)男性的皮脂腺比女性大，分泌也比較多 (C)男性感覺接受器比較少，所以較女性耐寒 (D)男性皮膚的pH值較女性高。
-84(C) 下列何者為非？皮膚每天和？ (A)紫外線 (B)空氣中的灰塵 (C)角落生物 (D)微生物接觸，時間一久自然就會老化。
-85(B) 皮脂膜的作用下列何者不是？ (A)殺菌 (B)補充體力 (C)防止水份蒸發 (D)保護皮膚。
-86(A) 精油是從植物的哪個部位萃取？ (A)根、莖、葉、花、果實 (B)只有花朵 (C)只有果實 (D)只有樹皮
-87(A) 最常見的精油萃取方式為： (A)水蒸氣蒸餾法 (B)冷凍法 (C)高溫油炸法 (D)曝曬法
-88(B) 柑橘類精油多採用： (A)蒸餾法 (B)冷壓法 (C)發酵法 (D)熱壓法
-89(B) 精油使用前應： (A)直接大量塗抹 (B)稀釋於基底油 (C)加酒精 (D)加清水
-90(B) 基底油的主要功能為： (A)增加刺激 (B)稀釋精油 (C)產生香味 (D)變色
-91(C) 以下何者屬於基底油？ (A)薰衣草 (B)茶樹 (C)甜杏仁油 (D)檸檬
-92(B) 薰衣草精油主要功效為： (A)提神 (B)放鬆助眠 (C)增加食慾 (D)刺激神經
-93(B) 茶樹精油常用於： (A)放鬆情緒 (B)抗菌清潔 (C)助眠 (D)增重
-94(C) 精油不可： (A)外用 (B)擴香 (C)口服(非專業指導) (D)稀釋使用
-95(B) 懷孕初期應： (A)隨意使用精油 (B)避免某些精油 (C)大量使用 (D)直接塗腹部
-96(C) 精油保存方式應： (A)陽光直射 (B)高溫 (C)深色瓶避光 (D)開瓶不蓋
-97(A) 柑橘類精油可能具有： (A)光敏性 (B)毒性 (C)放射性 (D)冰凍性
-98(C) 精油濃度一般按摩使用為： (A)20% (B)10% (C)2-3% (D)50%
-99(B) 以下何者為花類精油？ (A)迷迭香 (B)薰衣草 (C)檸檬 (D)茶樹
-100(A) 尤加利精油常用於： (A)呼吸道保養 (B)助眠 (C)減肥 (D)美白
-`;
-
-document.addEventListener('DOMContentLoaded', () => {
-    const lines = qnaRawText.trim().split('\n');
-    let htmlStr = '';
-    
-    lines.forEach(line => {
-        line = line.trim();
-        if(!line) return;
-        
-        // 利用 Regex 分離出題號、答案、題目與選項
-        const match = line.match(/^(\d+)\(([A-D])\)\s*(.*)$/);
-        if(match) {
-            const num = match[1];
-            const ans = match[2];
-            let content = match[3];
-            
-            let formattedBody = content;
-            
-            // 找出第一個選項 (例如 A. 或 (A)) 的位置，安全切分題目與選項
-            const firstOptionMatch = content.match(/\s+([A]\.|\([A]\))/);
-            
-            if (firstOptionMatch) {
-                const qText = content.substring(0, firstOptionMatch.index);
-                let optsText = content.substring(firstOptionMatch.index);
-                
-                // 將每個選項替換成獨立的 Flex 區塊，解決跑版問題
-                optsText = optsText.replace(/\s+([A-D]\.|\([A-D]\))/g, '</div><div class="qna-opt"><span class="opt-badge">$1</span><span class="opt-text">');
-                // 移除一開始多出來的閉合標籤，並在尾端補齊
-                optsText = optsText.replace(/^<\/div>/, '') + '</span></div>';
-                
-                formattedBody = `<div class="qna-q">${qText}</div><div class="qna-opts">${optsText}</div>`;
-            }
-
-            htmlStr += `
-            <div class="qna-item">
-                <div class="qna-header">
-                    <span class="qna-num">Question ${num}</span>
-                    <span class="qna-ans">解答: ${ans}</span>
-                </div>
-                <div class="qna-body">
-                    ${formattedBody}
-                </div>
-            </div>
-            `;
-        }
-    });
-    
-    document.getElementById('qna-container').innerHTML = htmlStr;
-
-    // 回到頂部按鈕邏輯
-    const backToTopBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTopBtn.style.display = 'flex';
-        } else {
-            backToTopBtn.style.display = 'none';
-        }
-    });
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-});
-</script>
+<script src="course-qna-data.js"></script>
+<script src="course-page.js"></script>
+</body>
+</html>

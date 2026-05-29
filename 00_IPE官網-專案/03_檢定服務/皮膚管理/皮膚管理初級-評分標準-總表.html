@@ -1,297 +1,599 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPE 評審評分標準對照手冊 (L1)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        :root { --ipe-navy: #2C3E50; --ipe-gold: #C6A96B; --ipe-red: #e74c3c; --ipe-gray-bg: #f8f9fa; --ipe-border: #dcdde1; }
-        body { font-family: 'Noto Sans TC', sans-serif; color: #2f3640; line-height: 1.6; margin: 0; padding: 40px; background-color: #f1f2f6; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-        .container { max-width: 1350px; margin: 0 auto; background: #fff; padding: 40px 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .header { text-align: center; border-bottom: 4px solid var(--ipe-navy); margin-bottom: 30px; padding-bottom: 15px; }
-        .header h1 { font-family: 'Noto Serif TC', serif; font-size: 32px; color: var(--ipe-navy); margin: 0; letter-spacing: 2px; }
-        .header .subtitle { font-size: 16px; color: var(--ipe-gold); font-weight: bold; margin-top: 8px; letter-spacing: 1px; }
-        table { width: 100%; border-collapse: collapse; margin-bottom: 40px; table-layout: fixed; }
-        th, td { border: 1px solid var(--ipe-border); padding: 14px 12px; vertical-align: middle; }
-        th { background: var(--ipe-navy); color: #fff; font-weight: 700; text-align: center; font-size: 15px; }
-        .section-header { background: var(--ipe-gray-bg); color: var(--ipe-navy); font-weight: 900; font-size: 18px; border-left: 8px solid var(--ipe-navy); text-align: left; padding: 12px 20px; }
-        .badge-district { background-color: #e8f4f8; color: #2980b9; border: 1px solid #b3d4fc; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 13.5px; white-space: nowrap; }
-        .badge-co { background-color: #fce4ec; color: #c2185b; border: 1px solid #f8bbd0; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 13.5px; white-space: nowrap; }
-        .gradient-list { margin: 0; padding: 0; list-style: none; }
-        .gradient-list li { display: flex; align-items: center; margin-bottom: 8px; }
-        .gradient-list li:last-child { margin-bottom: 0; }
-        .score-badge { flex: 0 0 70px; background: #ecf0f1; color: var(--ipe-navy); font-weight: 900; font-size: 13.5px; text-align: center; padding: 4px 6px; border-radius: 4px; margin-right: 15px; border: 1px solid #bdc3c7; }
-        .score-text { flex: 1; font-size: 14.5px; color: #333; }
-        .penalty-header { background: var(--ipe-red); color: #fff; border-left: 8px solid #c0392b; }
-        .penalty-sub-category { background: #fffafa; font-weight: bold; color: #c0392b; font-size: 15px; text-align: center; letter-spacing: 1px; }
-        .penalty-row:nth-child(even) { background-color: #fafbfc; }
-        .penalty-row:hover { background-color: #f1f2f6; }
-        .penalty-desc { font-size: 15px; color: #333; }
-        .hl { font-weight: 900; color: var(--ipe-navy); background-color: #ffeaa7 !important; border-bottom: 3px solid #ffcd02 !important; padding: 2px 4px; border-radius: 2px; }
-        .penalty-score-badge { display: inline-block; background: #ffe3e3; color: #c0392b; font-weight: 900; font-size: 15px; padding: 4px 15px; border-radius: 20px; border: 1px solid #ffbaba; }
-        .footer-note { text-align: center; font-size: 12px; color: #95a5a6; margin-top: 20px; border-top: 1px solid #eee; padding-top: 10px; }
-        
-        /* 調整後的 A4 直式 (Portrait) 列印專屬樣式 */
-        @media print {
-            @page { size: A4 portrait; margin: 10mm 8mm; }
-            body { padding: 0; background: #fff; } 
-            .container { max-width: none; padding: 0; box-shadow: none; width: 100%; }
-            .page-break-wrapper { page-break-before: always; break-before: page; }
-            
-            .header { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--ipe-navy); }
-            .header h1 { font-size: 22px; margin: 0; }
-            .header .subtitle { font-size: 14px; margin-top: 4px; }
-            
-            table { margin-bottom: 0px !important; width: 100%; border-collapse: collapse; }
-            tr { page-break-inside: avoid; break-inside: avoid; }
-            
-            /* 直式空間較窄，高度較寬，微調內距與字體 */
-            th, td { padding: 7px 4px !important; line-height: 1.3 !important; }
-            th { font-size: 13px !important; padding: 6px !important; }
-            td { font-size: 12px !important; }
-            td b { font-size: 12px !important; }
-            
-            .section-header { font-size: 14px !important; padding: 6px 10px !important; }
-            
-            .score-text { font-size: 11.5px !important; }
-            .penalty-desc { font-size: 12.5px !important; }
-            
-            .badge-district, .badge-co { font-size: 11px !important; padding: 2px 4px !important; }
-            
-            .gradient-list li { margin-bottom: 3px !important; }
-            .score-badge { font-size: 11px !important; padding: 2px 4px !important; margin-right: 6px !important; flex: 0 0 45px !important; }
-            
-            .penalty-sub-category { font-size: 13px !important; padding: 4px !important; }
-            .penalty-score-badge { font-size: 13px !important; padding: 2px 8px !important; }
-            
-            .footer-note { margin-top: 15px; padding-top: 5px; font-size: 10px; page-break-inside: avoid; }
-            .hl { border-bottom: 2px solid #e67e22 !important; padding: 0 1px !important; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPE 國際皮膚管理初級檢定 L1｜A4正反面評分標準</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#23384d;
+  --navy2:#30475e;
+  --gold:#c6a96b;
+  --line:#d9e0e7;
+  --bg:#f3f6f8;
+  --text:#26313d;
+  --green:#edf8f1;
+  --yellow:#fff8e8;
+  --red:#fff0f0;
+  --red-dark:#d94a3a;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  padding:24px;
+  background:#e9edf2;
+  color:var(--text);
+  font-family:'Noto Sans TC', Arial, sans-serif;
+  -webkit-print-color-adjust:exact!important;
+  print-color-adjust:exact!important;
+}
+.sheet{
+  width:297mm;
+  min-height:210mm;
+  margin:0 auto 18px;
+  background:white;
+  padding:9mm 9mm 8mm;
+  box-shadow:0 8px 28px rgba(0,0,0,.10);
+  overflow:hidden;
+}
+.header{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  border-bottom:3px solid var(--navy);
+  padding-bottom:6px;
+  margin-bottom:7px;
+}
+h1{
+  margin:0;
+  color:var(--navy);
+  font-size:24px;
+  letter-spacing:1.5px;
+  font-weight:900;
+}
+.subtitle{
+  color:var(--gold);
+  font-size:13px;
+  font-weight:800;
+  white-space:nowrap;
+}
+.section{
+  background:var(--navy);
+  color:white;
+  padding:6px 10px;
+  border-radius:8px 8px 0 0;
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:.5px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+th{
+  background:#f2f5f8;
+  color:var(--navy);
+  border:1px solid var(--line);
+  padding:5px 6px;
+  font-size:12.5px;
+  font-weight:900;
+  text-align:center;
+}
+td{
+  border:1px solid var(--line);
+  padding:5px 6px;
+  vertical-align:middle;
+  font-size:12.4px;
+  line-height:1.36;
+}
+.item{font-size:12.4px; line-height:1.32;}
+.core{font-size:12.6px; line-height:1.42;}
+.center{text-align:center;}
+.badge{
+  display:inline-block;
+  padding:3px 7px;
+  border-radius:99px;
+  font-size:11px;
+  font-weight:900;
+  white-space:nowrap;
+}
+.district{background:#e8f3ff;color:#1d6fb8;border:1px solid #b8d8f6;}
+.co{background:#fde7f0;color:#c2185b;border:1px solid #f5bfd2;}
+.grade-wrap{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:5px;
+}
+.grade{
+  min-height:43px;
+  padding:5px 6px;
+  border-radius:8px;
+  border:1px solid #dbe2e8;
+  line-height:1.25;
+}
+.grade b{
+  display:block;
+  font-size:11.6px;
+  margin-bottom:3px;
+  color:var(--navy);
+}
+.grade span{
+  display:block;
+  font-size:11.5px;
+}
+.high{background:var(--green);}
+.mid{background:var(--yellow);}
+.low{background:var(--red);}
+.score{
+  text-align:center;
+  font-size:16px;
+  font-weight:900;
+  color:var(--navy);
+}
+.footer{
+  margin-top:5px;
+  display:flex;
+  justify-content:space-between;
+  color:#7c8793;
+  font-size:10.5px;
+}
+.penalty-section{background:var(--red-dark);}
+.pen-table th{font-size:14px; padding:7px 8px;}
+.pen-table td{font-size:15px; padding:8px 10px; line-height:1.45;}
+.pen-code{width:12%; text-align:center; color:var(--navy);}
+.pen-cat{width:18%; text-align:center; font-weight:900; color:#b6362b; background:#fff8f7;}
+.pen-desc{width:58%;}
+.pen-score{width:12%; text-align:center; font-size:18px!important; font-weight:900; color:#b6362b;}
+.notice{
+  margin-top:10px;
+  padding:10px 12px;
+  background:#fff8e8;
+  border:1px solid #ead7a6;
+  border-radius:10px;
+  font-size:13.5px;
+  line-height:1.55;
+}
+@media screen and (max-width:1100px){
+  body{padding:12px;}
+  .sheet{width:297mm;}
+}
+@media print{
+  @page{size:A4 landscape; margin:0;}
+  body{background:white; padding:0;}
+  .sheet{
+    width:297mm;
+    height:210mm;
+    min-height:210mm;
+    margin:0;
+    box-shadow:none;
+    page-break-after:always;
+    break-after:page;
+  }
+  .sheet:last-child{page-break-after:auto; break-after:auto;}
+}
+</style>
+
+<style id="print-safe-fix">
+/* === A4 正反面安全列印修正版：避免底部被裁切 === */
+@media print {
+  @page { size: A4 landscape; margin: 0; }
+
+  .sheet{
+    width: 297mm !important;
+    height: 210mm !important;
+    min-height: 210mm !important;
+    padding: 7mm 8mm 6mm !important;
+    overflow: hidden !important;
+  }
+
+  .header{
+    margin-bottom: 5px !important;
+    padding-bottom: 4px !important;
+  }
+
+  h1{
+    font-size: 22px !important;
+    line-height: 1.15 !important;
+  }
+
+  .subtitle{
+    font-size: 11.5px !important;
+  }
+
+  .section{
+    padding: 4px 9px !important;
+    font-size: 13px !important;
+    border-radius: 6px 6px 0 0 !important;
+  }
+
+  th{
+    padding: 4px 5px !important;
+    font-size: 11.3px !important;
+    line-height: 1.25 !important;
+  }
+
+  td{
+    padding: 4px 5px !important;
+    font-size: 11.1px !important;
+    line-height: 1.26 !important;
+  }
+
+  .item,
+  .core{
+    font-size: 11.1px !important;
+    line-height: 1.26 !important;
+  }
+
+  .badge{
+    font-size: 10px !important;
+    padding: 2px 6px !important;
+  }
+
+  .grade-wrap{
+    gap: 4px !important;
+  }
+
+  .grade{
+    min-height: 34px !important;
+    padding: 4px 5px !important;
+    border-radius: 6px !important;
+    line-height: 1.18 !important;
+  }
+
+  .grade b{
+    font-size: 10.2px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .grade span{
+    font-size: 10.1px !important;
+    line-height: 1.22 !important;
+  }
+
+  .score{
+    font-size: 14px !important;
+  }
+
+  .footer{
+    margin-top: 3px !important;
+    font-size: 9px !important;
+    line-height: 1.15 !important;
+  }
+
+  .pen-table th{
+    font-size: 11.5px !important;
+    padding: 4px 6px !important;
+    line-height: 1.2 !important;
+  }
+
+  .pen-table td{
+    font-size: 12px !important;
+    padding: 4px 7px !important;
+    line-height: 1.22 !important;
+  }
+
+  .pen-score{
+    font-size: 14px !important;
+  }
+
+  .notice{
+    margin-top: 6px !important;
+    padding: 6px 9px !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    border-radius: 7px !important;
+  }
+}
+</style>
+
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <h1>IPE 國際皮膚管理初級檢定 (L1)</h1>
-        <div class="subtitle">評審評分標準對照手冊 </div>
-    </div>
-    <table>
-        <colgroup>
-            <col style="width: 14%;"> <col style="width: 8%;">  <col style="width: 26%;"> <col style="width: 46%;"> <col style="width: 6%;">  
-        </colgroup>
-        <thead>
-            <tr><th colspan="5" class="section-header">壹、術科技術考核標準 (滿分 100 / 及格 60)</th></tr>
-            <tr><th>考核項目</th><th>分工</th><th>評分核心重點</th><th>給分梯度詳細對照</th><th>配分</th></tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td align="left"><b>[A01] 填寫顧客資料卡</b></td>
-                <td align="center"><span class="badge-district">分區</span></td>
-                <td>全欄位必填、職業採勾選項目</td>
-                <td>
-                    <ul class="gradient-list">
-                        <li><div class="score-badge">5 分</div><div class="score-text">完整填寫無遺漏</div></li>
-                        <li><div class="score-badge" style="background:#fff;">3–4 分</div><div class="score-text">漏填 1–2 欄位</div></li>
-                        <li><div class="score-badge" style="background:#fff;">2分以下</div><div class="score-text">漏填 3 欄位（含）以上</div></li>
-                    </ul>
-                </td>
-                <td align="center"><b>5</b></td>
-            </tr>
-            <tr>
-                <td align="left"><b>[A02] 卸妝、洗臉</b></td>
-                <td align="center"><span class="badge-district">分區</span></td>
-                <td>眼唇與全臉乾淨卸除，動作確實且不滴水</td>
-                <td>
-                    <ul class="gradient-list">
-                        <li><div class="score-badge">9–10 分</div><div class="score-text">卸除極乾淨、動作流暢專業</div></li>
-                        <li><div class="score-badge" style="background:#fff;">6–8 分</div><div class="score-text">局部殘留或操作過程略微滴水</div></li>
-                        <li><div class="score-badge" style="background:#fff;">5分以下</div><div class="score-text">明顯殘妝或動作粗糙不確實</div></li>
-                    </ul>
-                </td>
-                <td align="center"><b>10</b></td>
-            </tr>
-            <tr>
-                <td align="left"><b>[A03] 去角質</b></td>
-                <td align="center"><span class="badge-district">分區</span></td>
-                <td>溫和操作、不拉扯皮膚，擦拭後無產品殘留</td>
-                <td>
-                    <ul class="gradient-list">
-                        <li><div class="score-badge">9–10 分</div><div class="score-text">操作極溫和、全臉無殘留感</div></li>
-                        <li><div class="score-badge" style="background:#fff;">6–8 分</div><div class="score-text">輕微拉扯或邊緣少量產品殘留</div></li>
-                        <li><div class="score-badge" style="background:#fff;">5分以下</div><div class="score-text">明顯拉扯或大面積產品殘留</div></li>
-                    </ul>
-                </td>
-                <td align="center"><b>10</b></td>
-            </tr>
-            <tr>
-                <td align="left"><b>[A04] 臉部勻油</b></td>
-                <td align="center"><span class="badge-district">分區</span></td>
-                <td>涵蓋額頭、眼、鼻、臉頰、下巴、脖子、前胸、肩頸、耳朵</td>
-                <td>
-                    <ul class="gradient-list">
-                        <li><div class="score-badge">9–10 分</div><div class="score-text">全區域涵蓋、手技手法精確</div></li>
-                        <li><div class="score-badge" style="background:#fff;">6–8 分</div><div class="score-text">遺漏 1–2 部位或手法節奏偏離</div></li>
-                        <li><div class="score-badge" style="background:#fff;">5分以下</div><div class="score-text">遺漏多處部位或手法完全錯誤</div></li>
-                    </ul>
-                </td>
-                <td align="center"><b>10</b></td>
-            </tr>
-            <tr>
-                <td align="left"><b>[A05] 臉部按摩技能</b></td>
-                <td align="center"><span class="badge-co">共評</span></td>
-                <td>手技服貼、柔軟，按摩過程順暢且具韻律感</td>
-                <td>
-                    <ul class="gradient-list">
-                        <li><div class="score-badge">9–10 分</div><div class="score-text">手技極服貼、節奏穩定且優雅</div></li>
-                        <li><div class="score-badge" style="background:#fff;">6–8 分</div><div class="score-text">偶有中斷感或按壓力度不平均</div></li>
-                        <li><div class="score-badge" style="background:#fff;">5分以下</div><div class="score-text">手法僵硬、節奏紊亂無美感</div></li>
-                    </ul>
-                </td>
-                <td align="center"><b>10</b></td>
-            </tr>
-            <tr>
-                <td align="left"><b>[A06] 前胸肩頸按摩技能</b></td>
-                <td align="center"><span class="badge-co">共評</span></td>
-                <td>完整涵蓋前胸與肩頸，雙手不可隨意離開身體</td>
-                <td>
-                    <ul class="gradient-list">
-                        <li><div class="score-badge">9–10 分</div><div class="score-text">全程手不離身、範圍完整到位</div></li>
-                        <li><div class="score-badge" style="background:#fff;">6–8 分</div><div class="score-text">偶爾發生離手或局部範圍遺漏</div></li>
-                        <li><div class="score-badge" style="background:#fff;">5分以下</div><div class="score-text">頻繁離手或按摩範圍嚴重不足</div></li>
-                    </ul>
-                </td>
-                <td align="center"><b>10</b></td>
-            </tr>
-            <tr>
-                <td align="left"><b>[A07] 清粉刺前置工作</b></td>
-                <td align="center"><span class="badge-district">分區</span></td>
-                <td>敷粉刺水、熱毛巾包覆，手部與工具酒精消毒</td>
-                <td>
-                    <ul class="gradient-list">
-                        <li><div class="score-badge">5 分</div><div class="score-text">流程完整且消毒動作確實</div></li>
-                        <li><div class="score-badge" style="background:#fff;">3–4 分</div><div class="score-text">遺漏上述其中一項關鍵步驟</div></li>
-                        <li><div class="score-badge" style="background:#fff;">2分以下</div><div class="score-text">多項流程遺漏，衛生觀念薄弱</div></li>
-                    </ul>
-                </td>
-                <td align="center"><b>5</b></td>
-            </tr>
-            <tr>
-                <td align="left"><b>[A08] 清粉刺技能</b></td>
-                <td align="center"><span class="badge-district">分區</span></td>
-                <td>準備 2 種以上工具，挑粉刺精準，嚴禁硬擠</td>
-                <td>
-                    <ul class="gradient-list">
-                        <li><div class="score-badge">9–10 分</div><div class="score-text">手法精確、工具運用得當且純熟</div></li>
-                        <li><div class="score-badge" style="background:#fff;">6–8 分</div><div class="score-text">偶有不精準或工具選擇不適當</div></li>
-                        <li><div class="score-badge" style="background:#fff;">5分以下</div><div class="score-text">硬擠發炎痘或工具準備不足</div></li>
-                    </ul>
-                </td>
-                <td align="center"><b>10</b></td>
-            </tr>
-            <tr>
-                <td align="left"><b>[A09] 敷臉面膜流程與技能</b></td>
-                <td align="center"><span class="badge-district">分區</span></td>
-                <td>面膜須有顏色（不可透膚），且必須敷至下顎</td>
-                <td>
-                    <ul class="gradient-list">
-                        <li><div class="score-badge">9–10 分</div><div class="score-text">敷面均勻美觀、範圍完整至下顎</div></li>
-                        <li><div class="score-badge" style="background:#fff;">6–8 分</div><div class="score-text">厚度不均或範圍邊緣略顯不足</div></li>
-                        <li><div class="score-badge" style="background:#fff;">5分以下</div><div class="score-text">面膜透膚或未敷至下顎線</div></li>
-                    </ul>
-                </td>
-                <td align="center"><b>10</b></td>
-            </tr>
-            <tr>
-                <td align="left"><b>[A10] 面膜後清潔與善後</b></td>
-                <td align="center"><span class="badge-district">分區</span></td>
-                <td>面膜卸除乾淨，保養程序（水、精、乳、防）完整</td>
-                <td>
-                    <ul class="gradient-list">
-                        <li><div class="score-badge">9–10 分</div><div class="score-text">清潔極乾淨、保養步驟無缺失</div></li>
-                        <li><div class="score-badge" style="background:#fff;">6–8 分</div><div class="score-text">局部殘留或遺漏 1 項保養產品</div></li>
-                        <li><div class="score-badge" style="background:#fff;">5分以下</div><div class="score-text">明顯殘留或遺漏多項保養步驟</div></li>
-                    </ul>
-                </td>
-                <td align="center"><b>10</b></td>
-            </tr>
-            <tr>
-                <td align="left"><b>[A11] 全程操作熟練度</b></td>
-                <td align="center"><span class="badge-co">共評</span></td>
-                <td>姿勢人體工學、桌面整潔、態度從容親切</td>
-                <td>
-                    <ul class="gradient-list">
-                        <li><div class="score-badge">9–10 分</div><div class="score-text">展現專業自信、考場環境整潔</div></li>
-                        <li><div class="score-badge" style="background:#fff;">6–8 分</div><div class="score-text">偶有慌亂或桌面工具擺放稍亂</div></li>
-                        <li><div class="score-badge" style="background:#fff;">5分以下</div><div class="score-text">明顯緊張不知所措、環境雜亂</div></li>
-                    </ul>
-                </td>
-                <td align="center"><b>10</b></td>
-            </tr>
-        </tbody>
-    </table>
 
-    <div class="page-break-wrapper">
-        <table>
-            <colgroup>
-                <col style="width: 14%;"> <col style="width: 78%;"> <col style="width: 8%;">
-            </colgroup>
-            <thead>
-                <tr><th colspan="3" class="section-header penalty-header">貳、扣分判定標準對照</th></tr>
-                <tr><th>違規類別</th><th>判定標準與違規情節說明</th><th>扣分</th></tr>
-            </thead>
-            <tbody>
-                <tr><td colspan="3" class="penalty-sub-category">● 明確扣分標準 (共 15 項)</td></tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B01] 重大違規</b></td><td class="penalty-desc">應考期間考生或模特兒 <span class="hl">手機鬧鈴響起</span></td><td align="center"><span class="penalty-score-badge">-100</span></td>
-                </tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B02] 安全違規</b></td><td class="penalty-desc">使用錯誤技法 <span class="hl">造成受傷</span> 或操作錯誤部位</td><td align="center"><span class="penalty-score-badge">-30</span></td>
-                </tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B03] 衛生與儀容</b></td><td class="penalty-desc">考生指甲有 <span class="hl">立體造型、貼鑽</span>，或長度長於指肉 0.2 公分</td><td align="center"><span class="penalty-score-badge">-20</span></td>
-                </tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B04] 耗材規定</b></td><td class="penalty-desc">全部毛巾非單一素色（未統一使用 <span class="hl">奶茶色</span>）</td><td align="center"><span class="penalty-score-badge">-10</span></td>
-                </tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B05] 服飾配件</b></td><td class="penalty-desc">考生及模特兒 <span class="hl">配戴任何飾品</span>、手錶、項鍊、戒指</td><td align="center"><span class="penalty-score-badge">-10</span></td>
-                </tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B06] 技術標準</b></td><td class="penalty-desc">面膜 <span class="hl">顏色透明</span>（可看見膚色）或未敷至下顎</td><td align="center"><span class="penalty-score-badge">-10</span></td>
-                </tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B07] 隱私防護</b></td><td class="penalty-desc">未正確使用毛巾，導致模特兒 <span class="hl">胸前美容衣曝光</span></td><td align="center"><span class="penalty-score-badge">-10</span></td>
-                </tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B08] 操作錯誤</b></td><td class="penalty-desc">按摩畫圈 <span class="hl">方向錯誤</span> 或過度拉扯皮膚</td><td align="center"><span class="penalty-score-badge">-10</span></td>
-                </tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B09] 產品規範</b></td><td class="penalty-desc">產品 <span class="hl">無中文標示</span> 或 <span class="hl">過期</span>（一項扣 2 分，上限 10 分）</td><td align="center"><span class="penalty-score-badge">-10</span></td>
-                </tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B10] 服儀規定</b></td><td class="penalty-desc">考生 <span class="hl">未穿著規定</span> 無 LOGO 白色工作服</td><td align="center"><span class="penalty-score-badge">-5</span></td>
-                </tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B11] 服儀規定</b></td><td class="penalty-desc">模特兒未穿著 <span class="hl">平口無 LOGO</span> 美容衣</td><td align="center"><span class="penalty-score-badge">-5</span></td>
-                </tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B12] 衛生流程</b></td><td class="penalty-desc">模特兒頭髮 <span class="hl">未用毛巾確實包好</span></td><td align="center"><span class="penalty-score-badge">-5</span></td>
-                </tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B13] 衛生規範</b></td><td class="penalty-desc">工作前 <span class="hl">未消毒雙手、未戴口罩</span> 或頭髮未紮好</td><td align="center"><span class="penalty-score-badge">-5</span></td>
-                </tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B14] 考場整理</b></td><td class="penalty-desc">未準備或 <span class="hl">未標示垃圾袋、待消毒袋</span>、大待消毒袋</td><td align="center"><span class="penalty-score-badge">-5</span></td>
-                </tr>
-                <tr class="penalty-row">
-                    <td align="center"><b>[B15] 環境維護</b></td><td class="penalty-desc">工具使用後未清潔擺放整齊，<span class="hl">桌面凌亂</span></td><td align="center"><span class="penalty-score-badge">-5</span></td>
-                </tr>
-              
-            </tbody>
-        </table>
-        <div class="footer-note">本手冊依據 IPE 國際皮膚管理初級檢定規範製作 | 僅供內部評審委員執行考核時對照參考使用</div>
+<section class="sheet">
+  <div class="header">
+    <h1>IPE 國際皮膚管理初級檢定（L1）</h1>
+    <div class="subtitle">評審評分標準對照手冊｜正面</div>
+  </div>
+
+  <div class="section">壹、術科技術考核標準（滿分 100／及格 60）</div>
+  <table>
+    <colgroup>
+      <col style="width:14%">
+      <col style="width:7%">
+      <col style="width:23%">
+      <col style="width:50%">
+      <col style="width:6%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>考核項目</th>
+        <th>分工</th>
+        <th>評分核心重點</th>
+        <th>給分梯度詳細對照</th>
+        <th>配分</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+<tr>
+  <td class="item"><b>[A01]</b><br>填寫顧客資料卡</td>
+  <td class="center"><span class="badge district">分區</span></td>
+  <td class="core">全欄位必填、職業採勾選項目</td>
+  <td>
+    <div class="grade-wrap">
+      <div class="grade high"><b>5 分</b><span>完整填寫無遺漏</span></div>
+      <div class="grade mid"><b>3–4 分</b><span>漏填 1–2 欄位</span></div>
+      <div class="grade low"><b>2 分以下</b><span>漏填 3 欄位（含）以上</span></div>
     </div>
-</div>
+  </td>
+  <td class="score">5</td>
+</tr>
+<tr>
+  <td class="item"><b>[A02]</b><br>卸妝、洗臉</td>
+  <td class="center"><span class="badge district">分區</span></td>
+  <td class="core">眼唇與全臉乾淨卸除，動作確實且不滴水</td>
+  <td>
+    <div class="grade-wrap">
+      <div class="grade high"><b>9–10 分</b><span>卸除極乾淨、動作流暢專業</span></div>
+      <div class="grade mid"><b>6–8 分</b><span>局部殘留或操作過程略微滴水</span></div>
+      <div class="grade low"><b>5 分以下</b><span>明顯殘妝或動作粗糙不確實</span></div>
+    </div>
+  </td>
+  <td class="score">10</td>
+</tr>
+<tr>
+  <td class="item"><b>[A03]</b><br>去角質</td>
+  <td class="center"><span class="badge district">分區</span></td>
+  <td class="core">溫和操作、不拉扯皮膚，擦拭後無產品殘留</td>
+  <td>
+    <div class="grade-wrap">
+      <div class="grade high"><b>9–10 分</b><span>操作極溫和、全臉無殘留感</span></div>
+      <div class="grade mid"><b>6–8 分</b><span>輕微拉扯或邊緣少量產品殘留</span></div>
+      <div class="grade low"><b>5 分以下</b><span>明顯拉扯或大面積產品殘留</span></div>
+    </div>
+  </td>
+  <td class="score">10</td>
+</tr>
+<tr>
+  <td class="item"><b>[A04]</b><br>臉部勻油</td>
+  <td class="center"><span class="badge district">分區</span></td>
+  <td class="core">涵蓋額頭、眼、鼻、臉頰、下巴、脖子、前胸、肩頸、耳朵</td>
+  <td>
+    <div class="grade-wrap">
+      <div class="grade high"><b>9–10 分</b><span>全區域涵蓋、手技手法精確</span></div>
+      <div class="grade mid"><b>6–8 分</b><span>遺漏 1–2 部位或手法節奏偏離</span></div>
+      <div class="grade low"><b>5 分以下</b><span>遺漏多處部位或手法完全錯誤</span></div>
+    </div>
+  </td>
+  <td class="score">10</td>
+</tr>
+<tr>
+  <td class="item"><b>[A05]</b><br>臉部按摩技能</td>
+  <td class="center"><span class="badge co">共評</span></td>
+  <td class="core">手技服貼、柔軟，按摩過程順暢且具韻律感</td>
+  <td>
+    <div class="grade-wrap">
+      <div class="grade high"><b>9–10 分</b><span>手技極服貼、節奏穩定且優雅</span></div>
+      <div class="grade mid"><b>6–8 分</b><span>偶有中斷感或按壓力度不平均</span></div>
+      <div class="grade low"><b>5 分以下</b><span>手法僵硬、節奏紊亂無美感</span></div>
+    </div>
+  </td>
+  <td class="score">10</td>
+</tr>
+<tr>
+  <td class="item"><b>[A06]</b><br>前胸肩頸按摩技能</td>
+  <td class="center"><span class="badge co">共評</span></td>
+  <td class="core">完整涵蓋前胸與肩頸，雙手不可隨意離開身體</td>
+  <td>
+    <div class="grade-wrap">
+      <div class="grade high"><b>9–10 分</b><span>全程手不離身、範圍完整到位</span></div>
+      <div class="grade mid"><b>6–8 分</b><span>偶爾發生離手或局部範圍遺漏</span></div>
+      <div class="grade low"><b>5 分以下</b><span>頻繁離手或按摩範圍嚴重不足</span></div>
+    </div>
+  </td>
+  <td class="score">10</td>
+</tr>
+<tr>
+  <td class="item"><b>[A07]</b><br>清粉刺前置工作</td>
+  <td class="center"><span class="badge district">分區</span></td>
+  <td class="core">敷粉刺水、熱毛巾包覆，手部與工具酒精消毒</td>
+  <td>
+    <div class="grade-wrap">
+      <div class="grade high"><b>5 分</b><span>流程完整且消毒動作確實</span></div>
+      <div class="grade mid"><b>3–4 分</b><span>遺漏上述其中一項關鍵步驟</span></div>
+      <div class="grade low"><b>2 分以下</b><span>多項流程遺漏，衛生觀念薄弱</span></div>
+    </div>
+  </td>
+  <td class="score">5</td>
+</tr>
+<tr>
+  <td class="item"><b>[A08]</b><br>清粉刺技能</td>
+  <td class="center"><span class="badge district">分區</span></td>
+  <td class="core">準備 2 種以上工具，挑粉刺精準，嚴禁硬擠</td>
+  <td>
+    <div class="grade-wrap">
+      <div class="grade high"><b>9–10 分</b><span>手法精確、工具運用得當且純熟</span></div>
+      <div class="grade mid"><b>6–8 分</b><span>偶有不精準或工具選擇不適當</span></div>
+      <div class="grade low"><b>5 分以下</b><span>硬擠發炎痘或工具準備不足</span></div>
+    </div>
+  </td>
+  <td class="score">10</td>
+</tr>
+<tr>
+  <td class="item"><b>[A09]</b><br>敷臉面膜流程與技能</td>
+  <td class="center"><span class="badge district">分區</span></td>
+  <td class="core">面膜須有顏色（不可透膚），且必須敷至下顎</td>
+  <td>
+    <div class="grade-wrap">
+      <div class="grade high"><b>9–10 分</b><span>敷面均勻美觀、範圍完整至下顎</span></div>
+      <div class="grade mid"><b>6–8 分</b><span>厚度不均或範圍邊緣略顯不足</span></div>
+      <div class="grade low"><b>5 分以下</b><span>面膜透膚或未敷至下顎線</span></div>
+    </div>
+  </td>
+  <td class="score">10</td>
+</tr>
+<tr>
+  <td class="item"><b>[A10]</b><br>面膜後清潔與善後</td>
+  <td class="center"><span class="badge district">分區</span></td>
+  <td class="core">面膜卸除乾淨，保養程序（水、精、乳、防）完整</td>
+  <td>
+    <div class="grade-wrap">
+      <div class="grade high"><b>9–10 分</b><span>清潔極乾淨、保養步驟無缺失</span></div>
+      <div class="grade mid"><b>6–8 分</b><span>局部殘留或遺漏 1 項保養產品</span></div>
+      <div class="grade low"><b>5 分以下</b><span>明顯殘留或遺漏多項保養步驟</span></div>
+    </div>
+  </td>
+  <td class="score">10</td>
+</tr>
+<tr>
+  <td class="item"><b>[A11]</b><br>全程操作熟練度</td>
+  <td class="center"><span class="badge co">共評</span></td>
+  <td class="core">姿勢人體工學、桌面整潔、態度從容親切</td>
+  <td>
+    <div class="grade-wrap">
+      <div class="grade high"><b>9–10 分</b><span>展現專業自信、考場環境整潔</span></div>
+      <div class="grade mid"><b>6–8 分</b><span>偶有慌亂或桌面工具擺放稍亂</span></div>
+      <div class="grade low"><b>5 分以下</b><span>明顯緊張不知所措、環境雜亂</span></div>
+    </div>
+  </td>
+  <td class="score">10</td>
+</tr>
+    </tbody>
+  </table>
+  <div class="footer">
+    <span>建議列印：A4 橫式、雙面列印、縮放 100%</span>
+    <span>Page 1 / 2</span>
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="header">
+    <h1>IPE 國際皮膚管理初級檢定（L1）</h1>
+    <div class="subtitle">扣分判定標準｜背面</div>
+  </div>
+
+  <div class="section penalty-section">貳、扣分判定標準對照</div>
+  <table class="pen-table">
+    <colgroup>
+      <col style="width:12%">
+      <col style="width:17%">
+      <col style="width:59%">
+      <col style="width:12%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>編號</th>
+        <th>違規類別</th>
+        <th>判定標準與違規情節說明</th>
+        <th>扣分</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+<tr>
+  <td class="pen-code"><b>[B01]</b></td>
+  <td class="pen-cat">重大違規</td>
+  <td class="pen-desc">應考期間考生或模特兒手機鬧鈴響起</td>
+  <td class="pen-score">-100</td>
+</tr>
+<tr>
+  <td class="pen-code"><b>[B02]</b></td>
+  <td class="pen-cat">安全違規</td>
+  <td class="pen-desc">使用錯誤技法造成受傷或操作錯誤部位</td>
+  <td class="pen-score">-30</td>
+</tr>
+<tr>
+  <td class="pen-code"><b>[B03]</b></td>
+  <td class="pen-cat">衛生與儀容</td>
+  <td class="pen-desc">考生指甲有立體造型、貼鑽，或長度長於指肉 0.2 公分</td>
+  <td class="pen-score">-20</td>
+</tr>
+<tr>
+  <td class="pen-code"><b>[B04]</b></td>
+  <td class="pen-cat">耗材規定</td>
+  <td class="pen-desc">全部毛巾非單一素色（未統一使用奶茶色）</td>
+  <td class="pen-score">-10</td>
+</tr>
+<tr>
+  <td class="pen-code"><b>[B05]</b></td>
+  <td class="pen-cat">服飾配件</td>
+  <td class="pen-desc">考生及模特兒配戴任何飾品、手錶、項鍊、戒指</td>
+  <td class="pen-score">-10</td>
+</tr>
+<tr>
+  <td class="pen-code"><b>[B06]</b></td>
+  <td class="pen-cat">技術標準</td>
+  <td class="pen-desc">面膜顏色透明（可看見膚色）或未敷至下顎</td>
+  <td class="pen-score">-10</td>
+</tr>
+<tr>
+  <td class="pen-code"><b>[B07]</b></td>
+  <td class="pen-cat">隱私防護</td>
+  <td class="pen-desc">未正確使用毛巾，導致模特兒胸前美容衣曝光</td>
+  <td class="pen-score">-10</td>
+</tr>
+<tr>
+  <td class="pen-code"><b>[B08]</b></td>
+  <td class="pen-cat">操作錯誤</td>
+  <td class="pen-desc">按摩畫圈方向錯誤或過度拉扯皮膚</td>
+  <td class="pen-score">-10</td>
+</tr>
+<tr>
+  <td class="pen-code"><b>[B09]</b></td>
+  <td class="pen-cat">產品規範</td>
+  <td class="pen-desc">產品無中文標示或過期（一項扣 2 分，上限 10 分）</td>
+  <td class="pen-score">-10</td>
+</tr>
+<tr>
+  <td class="pen-code"><b>[B10]</b></td>
+  <td class="pen-cat">服儀規定</td>
+  <td class="pen-desc">考生未穿著規定無 LOGO 白色工作服</td>
+  <td class="pen-score">-5</td>
+</tr>
+<tr>
+  <td class="pen-code"><b>[B11]</b></td>
+  <td class="pen-cat">服儀規定</td>
+  <td class="pen-desc">模特兒未穿著平口無 LOGO 美容衣</td>
+  <td class="pen-score">-5</td>
+</tr>
+<tr>
+  <td class="pen-code"><b>[B12]</b></td>
+  <td class="pen-cat">衛生流程</td>
+  <td class="pen-desc">模特兒頭髮未用毛巾確實包好</td>
+  <td class="pen-score">-5</td>
+</tr>
+<tr>
+  <td class="pen-code"><b>[B13]</b></td>
+  <td class="pen-cat">衛生規範</td>
+  <td class="pen-desc">工作前未消毒雙手、未戴口罩或頭髮未紮好</td>
+  <td class="pen-score">-5</td>
+</tr>
+<tr>
+  <td class="pen-code"><b>[B14]</b></td>
+  <td class="pen-cat">考場整理</td>
+  <td class="pen-desc">未準備或未標示垃圾袋、待消毒袋、大待消毒袋</td>
+  <td class="pen-score">-5</td>
+</tr>
+<tr>
+  <td class="pen-code"><b>[B15]</b></td>
+  <td class="pen-cat">環境維護</td>
+  <td class="pen-desc">工具使用後未清潔擺放整齊，桌面凌亂</td>
+  <td class="pen-score">-5</td>
+</tr>
+    </tbody>
+  </table>
+
+  <div class="notice">
+    <b>評審使用提醒：</b>正面用於技術項目逐項給分；背面用於違規扣分查核。建議採「先完成技術分數，再檢查扣分項目」的流程，避免評分時來回搜尋造成漏判。
+  </div>
+
+  <div class="footer">
+    <span>本手冊依據 IPE 國際皮膚管理初級檢定規範製作｜僅供內部評審委員執行考核時對照參考使用</span>
+    <span>Page 2 / 2</span>
+  </div>
+</section>
+
 </body>
 </html>
