@@ -39,18 +39,22 @@
             const match = line.match(/^(\d+)\(([A-D])\)\s*(.*)$/);
             if (!match) return '';
 
-            return '\n            <div class="qna-item">\n                <div class="qna-header">\n                    <span class="qna-num">Question ' + match[1] + '</span>\n                    <span class="qna-ans">解答: ' + match[2] + '</span>\n                </div>\n                <div class="qna-body">' + formatQuestion(match[3]) + '</div>\n            </div>';
+            return '\n            <div class="qna-item">\n                <div class="qna-header">\n                    <span class="qna-num">第 ' + match[1] + ' 題</span>\n                    <span class="qna-ans">解答: ' + match[2] + '</span>\n                </div>\n                <div class="qna-body">' + formatQuestion(match[3]) + '</div>\n            </div>';
         }).join('');
     }
 
     function setupPrintButton() {
         const button = document.querySelector('.print-pdf-btn');
+        const openPrintableQna = () => {
+            const qnaDetails = document.querySelector('.qna-details');
+            if (qnaDetails) qnaDetails.open = true;
+        };
+
+        window.addEventListener('beforeprint', openPrintableQna);
         if (!button) return;
 
         button.addEventListener('click', () => {
-            document.querySelectorAll('details').forEach((detail) => {
-                detail.open = true;
-            });
+            openPrintableQna();
             window.print();
         });
     }

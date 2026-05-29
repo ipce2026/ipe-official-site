@@ -182,15 +182,74 @@ body { margin: 0; background: #F6F8FB; overflow-x: hidden; }
 }
 
 @media print {
-    body { background: #fff; }
+    @page { size: A4 portrait; margin: 9mm 10mm; }
+    html, body { background: #fff; color: #111; font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif; }
     .ipe-wrap { width: 100%; max-width: none; margin: 0; box-shadow: none; }
     .ipe-main-content { padding: 0; }
+    .ipe-main-content > :not(.qna-details) { display: none !important; }
     .course-home-actions,
     .download-btn,
     .back-to-top,
     .svg-arrow { display: none !important; }
-    .ipe-details { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
-    .ipe-content { display: block; }
-    .qna-grid { gap: 12px; }
-    .qna-item { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+    .ipe-details:not(.qna-details) { display: none !important; }
+    .qna-details { display: block !important; margin: 0; border: 0; box-shadow: none; overflow: visible; }
+    .qna-details .ipe-summary {
+        display: block;
+        padding: 0 0 3mm;
+        background: #fff !important;
+        color: #111 !important;
+        border-bottom: 1px solid #bbb;
+        font-size: 14pt;
+        line-height: 1.2;
+        font-weight: 900;
+    }
+    .qna-details .ipe-summary i { display: none; }
+    .qna-details .ipe-content { display: block; padding: 3mm 0 0; }
+    .qna-details .qna-desc { display: none; }
+    .qna-grid { display: block; }
+    .qna-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        margin: 0 0 1.8mm;
+        padding: 0 0 1.8mm;
+        border: 0;
+        border-bottom: 1px solid #e7e7e7;
+        border-radius: 0;
+        box-shadow: none;
+        overflow: visible;
+    }
+    .qna-item::before { display: none; }
+    .qna-header { display: inline; margin: 0; padding: 0; border: 0; }
+    .qna-num,
+    .qna-ans {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        color: #111;
+        font-size: 8.5pt;
+        line-height: 1.25;
+        letter-spacing: 0;
+    }
+    .qna-num::after { content: " "; }
+    .qna-ans { font-weight: 900; white-space: nowrap; }
+    .qna-ans::after { content: " "; }
+    .qna-body { display: inline; font-size: 8.5pt; line-height: 1.35; color: #111; }
+    .qna-q { display: inline; margin: 0; font-weight: 700; color: #111; }
+    .qna-q::after { content: " "; }
+    .qna-opts {
+        display: inline;
+    }
+    .qna-opt { display: inline; }
+    .qna-opt .opt-badge {
+        margin: 0;
+        color: #111;
+        font-size: 8.5pt;
+        font-weight: 900;
+    }
+    .qna-opt .opt-badge::before { content: " "; }
+    .qna-opt .opt-text {
+        color: #111;
+        font-size: 8.5pt;
+        line-height: 1.35;
+    }
 }
