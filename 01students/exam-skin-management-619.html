@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6/19 台南場檢定考 皮膚管理 試卷</title>
+  <style>
+    :root {
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --line: #d7dce3;
+      --soft: #f6f7f9;
+      --accent: #8c6a2d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+      color: var(--ink);
+      background: #eef1f5;
+      line-height: 1.55;
+    }
+    .document {
+      width: min(100%, 980px);
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .page {
+      background: #fff;
+      margin: 0 auto 24px;
+      padding: 28px 30px 34px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+    }
+    .eyebrow {
+      margin: 0 0 6px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    h1, h2 {
+      margin: 0;
+      font-family: "Noto Serif TC", "PMingLiU", serif;
+      font-weight: 700;
+    }
+    h1 { font-size: 30px; }
+    h2 { font-size: 24px; }
+    .subhead {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .meta-block {
+      min-width: 220px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: var(--soft);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .meta-block.compact {
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .notice {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .notice-item {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: #fcfcfd;
+      font-size: 14px;
+    }
+    .notice-item.answer-box {
+      padding: 10px;
+    }
+    .question-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 12px;
+      align-items: start;
+    }
+    .question-card {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px 9px;
+      break-inside: avoid;
+    }
+    .question-no {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 12px;
+    }
+    .question-stem {
+      margin: 0 0 5px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .options-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 2px;
+      font-size: 11px;
+      line-height: 1.35;
+    }
+    .option-label {
+      display: inline-block;
+      min-width: 28px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .answer-table, .key-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 15px;
+    }
+    .answer-table th, .answer-table td, .key-table th, .key-table td {
+      border: 1px solid var(--line);
+      text-align: center;
+      padding: 10px 8px;
+      height: 40px;
+    }
+    .answer-table th, .key-table th {
+      background: var(--soft);
+      font-weight: 700;
+    }
+    .key-table td:nth-child(2) {
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .compact-answer-table {
+      font-size: 10px;
+    }
+    .compact-answer-table th,
+    .compact-answer-table td {
+      padding: 3px 2px;
+      height: 18px;
+    }
+    .footer-note {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+    @media (max-width: 760px) {
+      .page { padding: 22px 18px 28px; border-radius: 14px; }
+      .page-header { flex-direction: column; }
+      .notice { grid-template-columns: 1fr; }
+      .meta-block { min-width: 0; width: 100%; }
+      .question-list { grid-template-columns: 1fr; }
+      .question-card { grid-template-columns: 30px 1fr; }
+      .question-no { width: 30px; height: 30px; font-size: 12px; }
+    }
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 7mm;
+      }
+      body { background: #fff; }
+      .document { width: 100%; max-width: none; padding: 0; }
+      .page {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        min-height: auto;
+        page-break-after: always;
+        padding: 0;
+      }
+      .page.one-page {
+        page-break-after: always;
+      }
+      .page:last-child { page-break-after: auto; }
+      .page-header {
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+      }
+      h1 { font-size: 18px; }
+      h2 { font-size: 16px; }
+      .eyebrow { font-size: 9px; margin-bottom: 2px; }
+      .subhead { font-size: 10px; margin-top: 4px; }
+      .meta-block {
+        font-size: 10px;
+        padding: 6px 8px;
+        min-width: 190px;
+        line-height: 1.5;
+      }
+      .notice {
+        grid-template-columns: 1fr 270px;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+      .notice-item {
+        font-size: 10px;
+        padding: 7px 8px;
+        line-height: 1.4;
+      }
+      .question-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px 8px;
+      }
+      .question-card {
+        grid-template-columns: 22px 1fr;
+        padding: 5px 6px;
+        gap: 6px;
+        border-radius: 8px;
+      }
+      .question-no {
+        width: 22px;
+        height: 22px;
+        font-size: 10px;
+      }
+      .question-stem {
+        font-size: 10px;
+        margin-bottom: 3px;
+        line-height: 1.28;
+      }
+      .options-list {
+        font-size: 9px;
+        gap: 1px;
+        line-height: 1.24;
+      }
+      .option-label {
+        min-width: 20px;
+      }
+      .compact-answer-table {
+        font-size: 8.5px;
+      }
+      .compact-answer-table th,
+      .compact-answer-table td {
+        height: 14px;
+        padding: 1px;
+      }
+      .footer-note {
+        margin-top: 6px;
+        font-size: 9px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="document">
+    <section class="page one-page">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">IPE Certification Exam</p>
+          <h1>6/19 台南場檢定考 皮膚管理</h1>
+          <p class="subhead">共 25 題，單選題。請於作答卷填寫答案。</p>
+        </div>
+        <div class="meta-block">
+          <div>姓名：________________</div>
+          <div>座號：________________</div>
+          <div>考試日期：2026 / 06 / 19</div>
+          <div>考試地點：台南場</div>
+        </div>
+      </div>
+
+      <div class="notice">
+        <div class="notice-item">
+          請使用藍筆或黑筆作答。每題僅有 1 個正確答案。作答前請先核對科目與座號。
+        </div>
+        <div class="notice-item answer-box">
+          
+      <table class="answer-table compact-answer-table">
+        <thead>
+          <tr>
+            <th>題號</th>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+          </tr>
+        </thead>
+        <tbody>
+      <tr>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>5</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>7</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>8</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>10</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>11</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>12</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>13</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>14</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>15</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>16</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>17</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>18</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>19</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>20</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>21</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>22</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>23</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>24</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>25</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+      </table>
+  
+        </div>
+      </div>
+
+      <div class="question-list">
+    <article class="question-card">
+      <div class="question-no">1</div>
+      <div class="question-body">
+        <p class="question-stem">皮膚的三大構造是？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 表皮、真皮、皮下組織</li><li><span class="option-label">(B)</span> 角質層、基底層、皮脂腺</li><li><span class="option-label">(C)</span> 表皮、汗腺、血管</li><li><span class="option-label">(D)</span> 真皮、毛囊、神經</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">2</div>
+      <div class="question-body">
+        <p class="question-stem">顧客臉部泛紅、刺痛，應如何處理？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 立即停止刺激性操作</li><li><span class="option-label">(B)</span> 使用舒緩、修護產品</li><li><span class="option-label">(C)</span> 加強保濕，避免酸類</li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">3</div>
+      <div class="question-body">
+        <p class="question-stem">下列何者與皮膚老化最相關？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 膠原蛋白流失</li><li><span class="option-label">(B)</span> 汗腺分泌增加</li><li><span class="option-label">(C)</span> 黑色素減少</li><li><span class="option-label">(D)</span> 角質增生</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">4</div>
+      <div class="question-body">
+        <p class="question-stem">敏感肌膚是否需要保濕？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 需要</li><li><span class="option-label">(B)</span> 不需要，且非常重要</li><li><span class="option-label">(C)</span> 只在冬天</li><li><span class="option-label">(D)</span> 只在晚上</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">5</div>
+      <div class="question-body">
+        <p class="question-stem">下列哪一種行為有助於減少痘痘？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 常更換枕頭套</li><li><span class="option-label">(B)</span> 用手摸臉</li><li><span class="option-label">(C)</span> 不洗臉</li><li><span class="option-label">(D)</span> 熬夜</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">6</div>
+      <div class="question-body">
+        <p class="question-stem">痘痘肌是否一定會留下疤痕？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 不一定，視處理方式</li><li><span class="option-label">(B)</span> 一定會</li><li><span class="option-label">(C)</span> 永遠不會</li><li><span class="option-label">(D)</span> 與保養無關</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">7</div>
+      <div class="question-body">
+        <p class="question-stem">油性肌膚的特徵是？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 毛孔細小、易脫皮</li><li><span class="option-label">(B)</span> 出油多、毛孔粗大</li><li><span class="option-label">(C)</span> 容易泛紅</li><li><span class="option-label">(D)</span> 缺乏彈性</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">8</div>
+      <div class="question-body">
+        <p class="question-stem">表皮層中負責製造黑色素的細胞是？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 角質細胞</li><li><span class="option-label">(B)</span> 黑色素細胞</li><li><span class="option-label">(C)</span> 朗格漢氏細胞</li><li><span class="option-label">(D)</span> 纖維母細胞</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">9</div>
+      <div class="question-body">
+        <p class="question-stem">下列哪一成分具有保濕作用？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 酒精</li><li><span class="option-label">(B)</span> 玻尿酸</li><li><span class="option-label">(C)</span> 香精</li><li><span class="option-label">(D)</span> 過氧化物</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">10</div>
+      <div class="question-body">
+        <p class="question-stem">痘痘肌常見的膚質類型為？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 乾性肌</li><li><span class="option-label">(B)</span> 油性肌或混合偏油</li><li><span class="option-label">(C)</span> 中性肌</li><li><span class="option-label">(D)</span> 敏感乾肌</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">11</div>
+      <div class="question-body">
+        <p class="question-stem">痘痘肌防曬的重要性在於？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 防止出油</li><li><span class="option-label">(B)</span> 避免色素沉澱加重</li><li><span class="option-label">(C)</span> 讓皮膚變白</li><li><span class="option-label">(D)</span> 阻止痘痘生成</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">12</div>
+      <div class="question-body">
+        <p class="question-stem">消毒美容工具的主要目的為？ (A)去除灰塵 (B)殺死或抑制病原微生物 (C)增加香味 (D)改變顏色</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">13</div>
+      <div class="question-body">
+        <p class="question-stem">敏感性肌膚保養的原則為？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 使用強效去角質</li><li><span class="option-label">(B)</span> 常更換產品</li><li><span class="option-label">(C)</span> 成分單純、溫和</li><li><span class="option-label">(D)</span> 多使用酒精產品</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">14</div>
+      <div class="question-body">
+        <p class="question-stem">表皮層中具有防禦功能的細胞是？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 黑色素細胞</li><li><span class="option-label">(B)</span> 角質細胞</li><li><span class="option-label">(C)</span> 朗格漢氏細胞</li><li><span class="option-label">(D)</span> 纖維母細胞</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">15</div>
+      <div class="question-body">
+        <p class="question-stem">黑頭粉刺呈現黑色的主要原因是？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 細菌感染</li><li><span class="option-label">(B)</span> 血液凝固</li><li><span class="option-label">(C)</span> 油脂氧化</li><li><span class="option-label">(D)</span> 黑色素沉澱</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">16</div>
+      <div class="question-body">
+        <p class="question-stem">痘痘肌飲食建議為？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 多吃油炸食物</li><li><span class="option-label">(B)</span> 高糖飲食</li><li><span class="option-label">(C)</span> 均衡飲食、少油少糖</li><li><span class="option-label">(D)</span> 完全不吃澱粉</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">17</div>
+      <div class="question-body">
+        <p class="question-stem">痘痘肌適合的去角質方式為？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 顆粒型磨砂</li><li><span class="option-label">(B)</span> 強酸煥膚</li><li><span class="option-label">(C)</span> 溫和化學性去角質</li><li><span class="option-label">(D)</span> 每日去角質</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">18</div>
+      <div class="question-body">
+        <p class="question-stem">痘痘肌夜間保養重點為？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 美白</li><li><span class="option-label">(B)</span> 厚敷油類</li><li><span class="option-label">(C)</span> 修護與舒緩</li><li><span class="option-label">(D)</span> 強效去角質</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">19</div>
+      <div class="question-body">
+        <p class="question-stem">請簡述乾性肌膚的保養重點？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 加強保濕</li><li><span class="option-label">(B)</span> 使用滋潤型產品</li><li><span class="option-label">(C)</span> 避免過度清潔</li><li><span class="option-label">(D)</span> 以上皆是</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">20</div>
+      <div class="question-body">
+        <p class="question-stem">美容操作中為何要注意衛生？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 防止細菌感染</li><li><span class="option-label">(B)</span> 保護顧客與美容師健康</li><li><span class="option-label">(C)</span> 預防感染與交叉污染</li><li><span class="option-label">(D)</span> 以上皆是</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">21</div>
+      <div class="question-body">
+        <p class="question-stem">油性肌膚的管理列何者為非？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 清潔</li><li><span class="option-label">(B)</span> 定期去角質</li><li><span class="option-label">(C)</span> 保養品選擇清爽類</li><li><span class="option-label">(D)</span> 不需要擦防曬</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">22</div>
+      <div class="question-body">
+        <p class="question-stem">皮膚管理的流程需要那些？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 膚質分析</li><li><span class="option-label">(B)</span> 清潔/去角質</li><li><span class="option-label">(C)</span> 儀器操作導入</li><li><span class="option-label">(D)</span> 以上皆是</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">23</div>
+      <div class="question-body">
+        <p class="question-stem">不鏽鋼粉刺夾適合使用下列何種消毒方式？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 酒精消毒</li><li><span class="option-label">(B)</span> 煮沸消毒</li><li><span class="option-label">(C)</span> 紫外線消毒</li><li><span class="option-label">(D)</span> 以上皆可</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">24</div>
+      <div class="question-body">
+        <p class="question-stem">痘痘肌皮脂分泌旺盛，可能與哪項有關？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 年齡</li><li><span class="option-label">(B)</span> 荷爾蒙</li><li><span class="option-label">(C)</span> 遺傳</li><li><span class="option-label">(D)</span> 以上皆是</li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">25</div>
+      <div class="question-body">
+        <p class="question-stem">根准考證與保據初級術科規範，考生進教室後的第一個動作以及必須攜帶的物品，下列何者正確？</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> 不用先鋪床；攜帶養品</li><li><span class="option-label">(B)</span> 先把濕毛巾放入蒸氣箱（弓形直立）；攜帶准考證、雙方身分證與原子筆</li><li><span class="option-label">(C)</span> 先請模特兒上床；攜帶准考證與刷具</li><li><span class="option-label">(D)</span> 先進行手部消毒；攜帶雙方身分證</li></ol>
+      </div>
+    </article>
+  </div>
+      <p class="footer-note">本頁為單張 A4 列印版。標準答案與原題號對照附於後頁，便於監考與核對。</p>
+    </section>
+    
+    <section class="page key-page">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">Answer Key</p>
+          <h2>標準答案</h2>
+        </div>
+        <div class="meta-block compact">正確答案分布：A 6 題、B 7 題、C 6 題、D 6 題</div>
+      </div>
+
+      <table class="key-table">
+        <thead>
+          <tr>
+            <th>題號</th>
+            <th>答案</th>
+            <th>原題號</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>A</td>
+          <td>1</td>
+        </tr>
+      
+        <tr>
+          <td>2</td>
+          <td>A</td>
+          <td>20</td>
+        </tr>
+      
+        <tr>
+          <td>3</td>
+          <td>A</td>
+          <td>48</td>
+        </tr>
+      
+        <tr>
+          <td>4</td>
+          <td>A</td>
+          <td>55</td>
+        </tr>
+      
+        <tr>
+          <td>5</td>
+          <td>A</td>
+          <td>70</td>
+        </tr>
+      
+        <tr>
+          <td>6</td>
+          <td>A</td>
+          <td>81</td>
+        </tr>
+      
+        <tr>
+          <td>7</td>
+          <td>B</td>
+          <td>4</td>
+        </tr>
+      
+        <tr>
+          <td>8</td>
+          <td>B</td>
+          <td>14</td>
+        </tr>
+      
+        <tr>
+          <td>9</td>
+          <td>B</td>
+          <td>25</td>
+        </tr>
+      
+        <tr>
+          <td>10</td>
+          <td>B</td>
+          <td>45</td>
+        </tr>
+      
+        <tr>
+          <td>11</td>
+          <td>B</td>
+          <td>66</td>
+        </tr>
+      
+        <tr>
+          <td>12</td>
+          <td>B</td>
+          <td>84</td>
+        </tr>
+      
+        <tr>
+          <td>13</td>
+          <td>C</td>
+          <td>5</td>
+        </tr>
+      
+        <tr>
+          <td>14</td>
+          <td>C</td>
+          <td>23</td>
+        </tr>
+      
+        <tr>
+          <td>15</td>
+          <td>C</td>
+          <td>31</td>
+        </tr>
+      
+        <tr>
+          <td>16</td>
+          <td>C</td>
+          <td>42</td>
+        </tr>
+      
+        <tr>
+          <td>17</td>
+          <td>C</td>
+          <td>59</td>
+        </tr>
+      
+        <tr>
+          <td>18</td>
+          <td>C</td>
+          <td>73</td>
+        </tr>
+      
+        <tr>
+          <td>19</td>
+          <td>D</td>
+          <td>11</td>
+        </tr>
+      
+        <tr>
+          <td>20</td>
+          <td>D</td>
+          <td>12</td>
+        </tr>
+      
+        <tr>
+          <td>21</td>
+          <td>D</td>
+          <td>18</td>
+        </tr>
+      
+        <tr>
+          <td>22</td>
+          <td>D</td>
+          <td>27</td>
+        </tr>
+      
+        <tr>
+          <td>23</td>
+          <td>D</td>
+          <td>71</td>
+        </tr>
+      
+        <tr>
+          <td>24</td>
+          <td>D</td>
+          <td>76</td>
+        </tr>
+      
+        <tr>
+          <td>25</td>
+          <td>B</td>
+          <td>96</td>
+        </tr>
+      </tbody>
+      </table>
+    </section>
+  
+  </main>
+</body>
+</html>

@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6/19 台南場檢定考 熱蠟美肌 試卷</title>
+  <style>
+    :root {
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --line: #d7dce3;
+      --soft: #f6f7f9;
+      --accent: #8c6a2d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+      color: var(--ink);
+      background: #eef1f5;
+      line-height: 1.55;
+    }
+    .document {
+      width: min(100%, 980px);
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .page {
+      background: #fff;
+      margin: 0 auto 24px;
+      padding: 28px 30px 34px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+    }
+    .eyebrow {
+      margin: 0 0 6px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    h1, h2 {
+      margin: 0;
+      font-family: "Noto Serif TC", "PMingLiU", serif;
+      font-weight: 700;
+    }
+    h1 { font-size: 30px; }
+    h2 { font-size: 24px; }
+    .subhead {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .meta-block {
+      min-width: 220px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: var(--soft);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .meta-block.compact {
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .notice {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .notice-item {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: #fcfcfd;
+      font-size: 14px;
+    }
+    .notice-item.answer-box {
+      padding: 10px;
+    }
+    .question-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 12px;
+      align-items: start;
+    }
+    .question-card {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px 9px;
+      break-inside: avoid;
+    }
+    .question-no {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 12px;
+    }
+    .question-stem {
+      margin: 0 0 5px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .options-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 2px;
+      font-size: 11px;
+      line-height: 1.35;
+    }
+    .option-label {
+      display: inline-block;
+      min-width: 28px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .answer-table, .key-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 15px;
+    }
+    .answer-table th, .answer-table td, .key-table th, .key-table td {
+      border: 1px solid var(--line);
+      text-align: center;
+      padding: 10px 8px;
+      height: 40px;
+    }
+    .answer-table th, .key-table th {
+      background: var(--soft);
+      font-weight: 700;
+    }
+    .key-table td:nth-child(2) {
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .compact-answer-table {
+      font-size: 10px;
+    }
+    .compact-answer-table th,
+    .compact-answer-table td {
+      padding: 3px 2px;
+      height: 18px;
+    }
+    .footer-note {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+    @media (max-width: 760px) {
+      .page { padding: 22px 18px 28px; border-radius: 14px; }
+      .page-header { flex-direction: column; }
+      .notice { grid-template-columns: 1fr; }
+      .meta-block { min-width: 0; width: 100%; }
+      .question-list { grid-template-columns: 1fr; }
+      .question-card { grid-template-columns: 30px 1fr; }
+      .question-no { width: 30px; height: 30px; font-size: 12px; }
+    }
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 7mm;
+      }
+      body { background: #fff; }
+      .document { width: 100%; max-width: none; padding: 0; }
+      .page {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        min-height: auto;
+        page-break-after: always;
+        padding: 0;
+      }
+      .page.one-page {
+        page-break-after: always;
+      }
+      .page:last-child { page-break-after: auto; }
+      .page-header {
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+      }
+      h1 { font-size: 18px; }
+      h2 { font-size: 16px; }
+      .eyebrow { font-size: 9px; margin-bottom: 2px; }
+      .subhead { font-size: 10px; margin-top: 4px; }
+      .meta-block {
+        font-size: 10px;
+        padding: 6px 8px;
+        min-width: 190px;
+        line-height: 1.5;
+      }
+      .notice {
+        grid-template-columns: 1fr 270px;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+      .notice-item {
+        font-size: 10px;
+        padding: 7px 8px;
+        line-height: 1.4;
+      }
+      .question-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px 8px;
+      }
+      .question-card {
+        grid-template-columns: 22px 1fr;
+        padding: 5px 6px;
+        gap: 6px;
+        border-radius: 8px;
+      }
+      .question-no {
+        width: 22px;
+        height: 22px;
+        font-size: 10px;
+      }
+      .question-stem {
+        font-size: 10px;
+        margin-bottom: 3px;
+        line-height: 1.28;
+      }
+      .options-list {
+        font-size: 9px;
+        gap: 1px;
+        line-height: 1.24;
+      }
+      .option-label {
+        min-width: 20px;
+      }
+      .compact-answer-table {
+        font-size: 8.5px;
+      }
+      .compact-answer-table th,
+      .compact-answer-table td {
+        height: 14px;
+        padding: 1px;
+      }
+      .footer-note {
+        margin-top: 6px;
+        font-size: 9px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="document">
+    <section class="page one-page">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">IPE Certification Exam</p>
+          <h1>6/19 台南場檢定考 熱蠟美肌</h1>
+          <p class="subhead">共 25 題，單選題。請於作答卷填寫答案。</p>
+        </div>
+        <div class="meta-block">
+          <div>姓名：________________</div>
+          <div>座號：________________</div>
+          <div>考試日期：2026 / 06 / 19</div>
+          <div>考試地點：台南場</div>
+        </div>
+      </div>
+
+      <div class="notice">
+        <div class="notice-item">
+          請使用藍筆或黑筆作答。每題僅有 1 個正確答案。作答前請先核對科目與座號。
+        </div>
+        <div class="notice-item answer-box">
+          
+      <table class="answer-table compact-answer-table">
+        <thead>
+          <tr>
+            <th>題號</th>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+          </tr>
+        </thead>
+        <tbody>
+      <tr>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>5</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>7</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>8</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>10</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>11</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>12</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>13</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>14</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>15</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>16</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>17</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>18</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>19</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>20</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>21</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>22</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>23</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>24</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td>25</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+      </table>
+  
+        </div>
+      </div>
+
+      <div class="question-list">
+    <article class="question-card">
+      <div class="question-no">1</div>
+      <div class="question-body">
+        <p class="question-stem">毛髮的生長週期主要分為哪三個階段？ (A)成長期、衰退期、休止期 (B)成長期、休止期、死亡期 (C)萌發期、成長期、脫落期 (D)活躍期、靜止期、衰退期</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">2</div>
+      <div class="question-body">
+        <p class="question-stem">下列何種皮膚層級不含血管，其養分獲取完全仰賴下方組織的滲透？ (A)表皮層 (B)真皮乳頭層 (C)真皮網狀層 (D)皮下組織</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">3</div>
+      <div class="question-body">
+        <p class="question-stem">蠟機加熱時，若蠟液呈現過稀的水狀，代表？ (A)溫度太高 (B)溫度剛好 (C)溫度太低 (D)蠟已經壞了</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">4</div>
+      <div class="question-body">
+        <p class="question-stem">若顧客皮膚容易過敏，測試過敏反應應在何時進行？ (A)除毛當下 (B)除毛前3天 (C)除毛後 (D)不需要測試</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">5</div>
+      <div class="question-body">
+        <p class="question-stem">人體皮膚構造由外而內，正確的排列順序為？ (A)真皮層、表皮層、皮下組織 (B)表皮層、真皮層、皮下組織 (C)皮下組織、表皮層、真皮層 (D)表皮層、皮下組織、真皮層</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">6</div>
+      <div class="question-body">
+        <p class="question-stem">身體哪一個部位的皮膚通常沒有毛囊與皮脂腺？ (A)腳背 (B)手掌與腳掌 (C)腋下 (D)耳後</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">7</div>
+      <div class="question-body">
+        <p class="question-stem">關於皮膚受傷後的「炎症後色素沈澱(PIH)」，在除毛中最容易因何種錯誤操作引起？ (A)蠟溫太低 (B)撕除角度過高導致真皮層微損傷 (C)沒塗前置油 (D)使用硬蠟</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">8</div>
+      <div class="question-body">
+        <p class="question-stem">硬蠟(Hard Wax)的主要操作特性為？ (A)需使用脫毛布 (B)待冷卻硬化後直接撕除 (C)只能用在腿部 (D)不需要加熱</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">9</div>
+      <div class="question-body">
+        <p class="question-stem">硬蠟操作時撕除方向為？ (A)順毛撕除 (B)逆毛撕除 (C)垂直撕除 (D)隨意撕除</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">10</div>
+      <div class="question-body">
+        <p class="question-stem">某些高級熱蠟會添加「洋甘菊藍(Azulene)」，該成分在化學性質上主要的藥理作用為何？ (A)增加蠟的抓毛強度 (B)具備強效抗發炎與鎮定受損組織的作用 (C)提升蠟的熔點 (D)防止蠟氧化變質</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">11</div>
+      <div class="question-body">
+        <p class="question-stem">撕蠟後的立即動作「按壓安撫(Pressure)」目的是？ (A)把毛壓回去 (B)阻斷神經傳導，減輕疼痛 (C)幫助止血 (D)幫助散熱</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">12</div>
+      <div class="question-body">
+        <p class="question-stem">針對極短毛(低於0.2cm)，熱蠟的效果？ (A)效果最佳 (B)效果不佳，蠟可能抓不住 (C)比較痛 (D)容易斷毛</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">13</div>
+      <div class="question-body">
+        <p class="question-stem">男士鬍鬚除毛後，為何極易出現「血點反應(Pinpoint bleeding)」？ (A)技術不佳 (B)鬍鬚毛根深達真皮網狀層，拔除時會撕裂毛乳頭微血管 (C)顧客過敏 (D)蠟太乾</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">14</div>
+      <div class="question-body">
+        <p class="question-stem">除毛後24小時內應避免使用含有什麼成分的產品？ (A)純水 (B)香精、酒精、酸類 (C)玻尿酸 (D)胺基酸</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">15</div>
+      <div class="question-body">
+        <p class="question-stem">如何區分「熱疹(Heat Rash)」與「蠟後過敏反應」？ (A)熱疹通常出現在除毛後立即發生 (B)過敏反應通常侷限於塗蠟位置，熱疹則出現在排汗受阻部位且伴隨細小水泡 (C)兩者沒有區別 (D)過敏反應不會發癢</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">16</div>
+      <div class="question-body">
+        <p class="question-stem">面對私密處毛髮生長方向極亂的顧客，最好的策略是？ (A)使用大片軟蠟布 (B)將毛修短，使用硬蠟小區塊分區處理 (C)用剃刀剃 (D)不接此客</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">17</div>
+      <div class="question-body">
+        <p class="question-stem">顧客除毛後反應：「為什麼有些地方摸起來刺刺的，好像沒除乾淨？」此時你檢視發現是休止期的極短毛。你的解釋應為？ (A)客人毛偏硬，蠟沒抓好 (B)解釋毛髮有不同生長週期，休止期的短毛尚埋在表皮下，需待下次生長方可除淨 (C)承認技術失誤並退費 (D)用刮刀幫他刮掉</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">18</div>
+      <div class="question-body">
+        <p class="question-stem">「立毛肌」收縮時會產生何種現象？ (A)流汗 (B)出油 (C)雞皮疙瘩 (D)毛髮脫落</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">19</div>
+      <div class="question-body">
+        <p class="question-stem">毛髮生長週期中，哪一個階段的毛囊長度最短且最接近表皮？ (A)成長期 (B)退行期 (C)休止期 (D)萌發期</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">20</div>
+      <div class="question-body">
+        <p class="question-stem">「二氧化鈦(Titanium Dioxide)」添加在熱蠟中的主要功能為何？ (A)增加蠟的抓毛力 (B)使蠟具備物理性防曬效果 (C)降低熱傳導率，緩解皮膚熱感並增加親膚性 (D)改變蠟的顏色</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">21</div>
+      <div class="question-body">
+        <p class="question-stem">關於「內嵌毛」的處理，顧客在家不應該？ (A)加強保濕 (B)定期去角質 (C)用針去挑或用手擠 (D)穿寬鬆衣物</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">22</div>
+      <div class="question-body">
+        <p class="question-stem">下列何者會影響毛髮生長的速度與粗細？ (A)賀爾蒙 (B)遺傳 (C)營養狀況 (D)以上皆是</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">23</div>
+      <div class="question-body">
+        <p class="question-stem">塗硬蠟時，木棒與皮膚接觸的最佳角度約為？ (A)90度 (B)45度 (C)15度 (D)0度平貼</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">24</div>
+      <div class="question-body">
+        <p class="question-stem">遇到非常怕痛的初次體驗顧客，操作策略應為？ (A)小範圍分次除毛，並加強按壓安撫 (B)大面積快速撕除 (C)聊天分散注意力 (D)A與C皆是</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  
+    <article class="question-card">
+      <div class="question-no">25</div>
+      <div class="question-body">
+        <p class="question-stem">一位顧客進行完私密處除毛後三天，致電反應：「除毛處出現大量紅色小疹子且非常癢」。作為專業老師，你初步判斷最可能的成因與建議為何？ (A)這是排毒現象，多喝水即可 (B)毛髮長不出來，應立刻回店強力去角質 (C)蠟過敏，建議塗抹美白霜 (D)可能是細菌性毛囊炎或因汗水摩擦引起的熱疹，建議暫時保持乾爽，若有膿皰請就醫</p>
+        <ol class="options-list"><li><span class="option-label">(A)</span> </li><li><span class="option-label">(B)</span> </li><li><span class="option-label">(C)</span> </li><li><span class="option-label">(D)</span> </li></ol>
+      </div>
+    </article>
+  </div>
+      <p class="footer-note">本頁為單張 A4 列印版。標準答案與原題號對照附於後頁，便於監考與核對。</p>
+    </section>
+    
+    <section class="page key-page">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">Answer Key</p>
+          <h2>標準答案</h2>
+        </div>
+        <div class="meta-block compact">正確答案分布：A 4 題、B 13 題、C 4 題、D 4 題</div>
+      </div>
+
+      <table class="key-table">
+        <thead>
+          <tr>
+            <th>題號</th>
+            <th>答案</th>
+            <th>原題號</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>A</td>
+          <td>3</td>
+        </tr>
+      
+        <tr>
+          <td>2</td>
+          <td>A</td>
+          <td>27</td>
+        </tr>
+      
+        <tr>
+          <td>3</td>
+          <td>A</td>
+          <td>53</td>
+        </tr>
+      
+        <tr>
+          <td>4</td>
+          <td>A</td>
+          <td>100</td>
+        </tr>
+      
+        <tr>
+          <td>5</td>
+          <td>B</td>
+          <td>1</td>
+        </tr>
+      
+        <tr>
+          <td>6</td>
+          <td>B</td>
+          <td>15</td>
+        </tr>
+      
+        <tr>
+          <td>7</td>
+          <td>B</td>
+          <td>24</td>
+        </tr>
+      
+        <tr>
+          <td>8</td>
+          <td>B</td>
+          <td>39</td>
+        </tr>
+      
+        <tr>
+          <td>9</td>
+          <td>B</td>
+          <td>57</td>
+        </tr>
+      
+        <tr>
+          <td>10</td>
+          <td>B</td>
+          <td>67</td>
+        </tr>
+      
+        <tr>
+          <td>11</td>
+          <td>B</td>
+          <td>80</td>
+        </tr>
+      
+        <tr>
+          <td>12</td>
+          <td>B</td>
+          <td>99</td>
+        </tr>
+      
+        <tr>
+          <td>13</td>
+          <td>B</td>
+          <td>116</td>
+        </tr>
+      
+        <tr>
+          <td>14</td>
+          <td>B</td>
+          <td>136</td>
+        </tr>
+      
+        <tr>
+          <td>15</td>
+          <td>B</td>
+          <td>154</td>
+        </tr>
+      
+        <tr>
+          <td>16</td>
+          <td>B</td>
+          <td>171</td>
+        </tr>
+      
+        <tr>
+          <td>17</td>
+          <td>B</td>
+          <td>194</td>
+        </tr>
+      
+        <tr>
+          <td>18</td>
+          <td>C</td>
+          <td>7</td>
+        </tr>
+      
+        <tr>
+          <td>19</td>
+          <td>C</td>
+          <td>25</td>
+        </tr>
+      
+        <tr>
+          <td>20</td>
+          <td>C</td>
+          <td>60</td>
+        </tr>
+      
+        <tr>
+          <td>21</td>
+          <td>C</td>
+          <td>132</td>
+        </tr>
+      
+        <tr>
+          <td>22</td>
+          <td>D</td>
+          <td>17</td>
+        </tr>
+      
+        <tr>
+          <td>23</td>
+          <td>D</td>
+          <td>78</td>
+        </tr>
+      
+        <tr>
+          <td>24</td>
+          <td>D</td>
+          <td>167</td>
+        </tr>
+      
+        <tr>
+          <td>25</td>
+          <td>D</td>
+          <td>186</td>
+        </tr>
+      </tbody>
+      </table>
+    </section>
+  
+  </main>
+</body>
+</html>
